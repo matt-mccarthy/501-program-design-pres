@@ -19,12 +19,12 @@
 
 \theoremstyle{plain}
 \newtheorem{thm}{Theorem}[section]
-\newtheorem{corollary}[thm]{Corollary}
-\newtheorem{lemma}[thm]{Lemma}
-\newtheorem{example}[thm]{Example}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{exmp}[thm]{Example}
 
 \theoremstyle{definition}
-\newtheorem{definition}{Definition}[section]
+\newtheorem{defn}{Definition}[section]
 
 \def\AA{\mathbb{A}}	% Algebraics
 \def\CC{\mathbb{C}}	% Complex
