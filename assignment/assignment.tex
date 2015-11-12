@@ -8,11 +8,54 @@
 
 \begin{document}
 \section{Description}
-$\RR^n$ is a complete metric space for all $n\in\NN$.
-\section{Part 1}
-Prove $\RR$ is a complete metric space.
-Use this to show $\RR^n$ is complete.
-\section{Part 2}
-Since the proof is obvious, prove the Riemann Hypothesis.
+This goal of this project is to demonstrate the ability to produce and implement an API adhereing to JavaDoc standards.
+This will be accomplished by producing a specified API and then implementing that API.
+\section{Requirements}
+\begin{figure}[h!]
+\centering
+\caption{It should look similar to this}
+\end{figure}
+You will create an API in JavaDoc which describes a GUI calcululator as shown above.
+This calculator must be capable of performing addition, subtraction, division, multiplicationm, and exponential functions on the Real numbers (no Complex values).
+The methods for mathematical operations may be used by another program as some later date and should not truncate or round.
+Any truncating or rounding must be done after values are passed back to the GUI.
+
+Moreover, the final program should exhibit the following behaviors.
+\begin{enumerate}
+\item It should compile.
+\item The API should be written in such a way that code reuse is simple.
+\item The implementation should take advantage of java library methods. You may only use the Java standard library.
+\item The API should be well-documented (if you fill out the JavaDoc correctly you will have done this).
+\item Code should be self-documenting, don't enter comments saying what a switch statement is doing. Commenting explains blocks of code.
+If you have to read snippets from multiple classes to understand what a section of code is doing put a comment.
+\end{enumerate}
+\section{Part 1: Designing the API}
+The calculator will consist of at least two classes at your discretion.
+\verb|MathMethods.java| is the container for all mathematical operations.
+It consists entirely of static methods and has no global variables.
+Furthermore, each of the methods in MathMethods must return a double.
+Mathmethods javadoc must make mention of when it will throw exceptions due to the operation requested, e.g square root of a negative number.
+\verb|CalcGUI.java| contains the GUI component of this assignment.
+You may implement both the JFrame and JPanel/JButtons/components in this class or separate them.
+\verb|CalcGUI.java| will have a menubar with a File menu and an About menu.
+File menu consists of one item, and exit button the program.
+About menu consist of one item, an about entry which creates a new window listing the names of the members of the team.
+All buttons indicated in the figure above must be present on the calculator.
+The calculator can only perform binary operations. ``\verb|2+2=|" is a valid operation, ``\verb|2+2+2=|" is not. 
+If a user enters the following ``\verb|2+2=|" and follows this with a ``\verb|+2=|" the calculator should display ``\verb|6|".
+The ``\verb|C|" button should clear all input.
+The \verb|x^y| button means to compute $x^y$.
+The display should display a ``\verb|^|" for both exponentials or roots. ``\verb|5^.5|" is $\sqrt{5}$, ``\verb|5^5|" is $5^{5}$.
+
+\section{Part 2: Implementation}
+Implement \verb|MathMethods.java|.
+
+\section {Part 3: Grading}
+The primary purpose of this assignment is to demonstrate mastery of writing an API, therefore 60\% of the total grade consists of an evaluation of teh API.
+The remianing 40\% is in producing a functioning calculator. The API \textbf{must} be committed to GIT not later than 11:59pm November 21, 2015. The source code for Calculator must be committed before class on November 24th. Deviations from the submitted API must be documented in the javadoc of the final code. Be prepared to see your code displayed, if you wrote spaghetti everyone will see it. If your code is compeltly left justified everyone will see it (and you will lose points on code readability).
+
+\section{Extra Credit}
+Implement an alogrithm to serve as a proof of concept that $P=NP$.
+Add capacity for CalcGUI.java to recevie keyboard input.
 
 \end{document}
